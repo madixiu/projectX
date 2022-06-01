@@ -2,6 +2,8 @@ import { Text, View, StyleSheet } from 'react-native'
 import React, { Component } from 'react'
 import AssetSection from './components/AssetSection'
 import SelectionSection from './components/SelectionSection'
+import BestList from './components/BestList/BestList'
+import { colors } from '../../misc/colors'
 export class Home extends Component {
   render() {
     return (
@@ -11,6 +13,13 @@ export class Home extends Component {
         </View>
         <View style={styles.SelectionSection}>
           <SelectionSection />
+        </View>
+        <View style={styles.BestListDivider}>
+          <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 12,color: colors.Keppel}}>مشهاده همه</Text>
+          <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 16,color: colors.OxfordBlue}}>برترین ها</Text>
+        </View>
+        <View>
+          <BestList />
         </View>
       </View>
     )
@@ -32,7 +41,12 @@ const styles = StyleSheet.create({
     
     alignContent: 'center', 
     justifyContent: 'center'
-    
+  },
+  BestListDivider: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding:20
   }
 })
 export default Home
