@@ -23,7 +23,7 @@ export default class AssetSection extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     // alignContent: 'flex-end', 
     // justifyContent: 'flex-end',
     alignItems:'flex-end',

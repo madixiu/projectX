@@ -35,8 +35,7 @@ export class Home extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // alignItems: 'center',
-    // justifyContent: 'center',
+    paddingTop:30,
   },
   AssetSection: {
     padding: 10,
@@ -53,7 +52,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding:20
+    // padding:20
+    paddingLeft:20,
+    paddingRight: 20,
+    paddingTop:20 
   }
 })
 export default Home

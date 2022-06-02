@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderColor: 'gainsboro',
     borderStyle:'solid',
-    borderWidth:2,
+    borderWidth:3,
     borderRadius: 24,
     marginRight: 10,
     maxWidth: maxWidth

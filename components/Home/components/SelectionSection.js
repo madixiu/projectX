@@ -47,7 +47,7 @@ export default class SelectionSection extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignContent: 'center', 
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   SelectionViewIcon: {
     borderColor: 'gainsboro',
     borderStyle:'solid',
-    borderWidth:0.5,
+    borderWidth:2,
     borderRadius: 12,
     padding: 15,
     backgroundColor: '#f6f7f8'
