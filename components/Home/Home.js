@@ -21,6 +21,13 @@ export class Home extends Component {
         <View>
           <BestList />
         </View>
+        <View style={styles.BestListDivider}>
+          <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 12,color: colors.Keppel}}>مشهاده همه</Text>
+          <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 16,color: colors.OxfordBlue}}>برترین ها</Text>
+        </View>
+        <View>
+          <BestList />
+        </View>
       </View>
     )
   }
