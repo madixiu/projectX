@@ -1,13 +1,21 @@
-import { Text, View, StyleSheet } from 'react-native'
 import React, { Component } from 'react'
+import { Text, View, StyleSheet,ScrollView } from 'react-native'
 import AssetSection from './components/AssetSection'
 import SelectionSection from './components/SelectionSection'
 import BestList from './components/BestList/BestList'
 import { colors } from '../../misc/colors'
+
+
+
+
 export class Home extends Component {
+  constructor(){
+    super();
+  }
+  componentDidMount(){}
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={[styles.container]}>
         <View style={styles.AssetSection}>
           <AssetSection />
         </View>
@@ -28,14 +36,22 @@ export class Home extends Component {
         <View>
           <BestList />
         </View>
-      </View>
+      </ScrollView>
     )
   }
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop:30,
+    // paddingTop:30,
+    marginTop:30,
+    // backgroundColor:'black'
+  },
+  lightContainer: {
+    backgroundColor: '#fff',
+  },
+  darkContainer: {
+    backgroundColor: '#242c40',
   },
   AssetSection: {
     padding: 10,
