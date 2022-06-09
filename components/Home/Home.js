@@ -4,8 +4,6 @@ import AssetSection from './components/AssetSection'
 import SelectionSection from './components/SelectionSection'
 import BestList from './components/BestList/BestList'
 import { colors } from '../../misc/colors'
-import { switchRoute } from '../../redux/routeSlice'
-import { useSelector, useDispatch } from 'react-redux'; 
 import TopBar from '../TopBar/TopBar'
 
 
