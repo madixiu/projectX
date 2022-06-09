@@ -4,39 +4,52 @@ import AssetSection from './components/AssetSection'
 import SelectionSection from './components/SelectionSection'
 import BestList from './components/BestList/BestList'
 import { colors } from '../../misc/colors'
+import { switchRoute } from '../../redux/routeSlice'
+import { useSelector, useDispatch } from 'react-redux'; 
+import TopBar from '../TopBar/TopBar'
 
 
 
 
+// const dispatch = useDispatch();
 export class Home extends Component {
+  
   constructor(){
     super();
   }
-  componentDidMount(){}
+  componentDidMount(){
+    console.log("home monted");
+    console.log(this.props.route);
+
+  }
   render() {
     return (
-      <ScrollView style={[styles.container]}>
-        <View style={styles.AssetSection}>
-          <AssetSection />
-        </View>
-        <View style={styles.SelectionSection}>
-          <SelectionSection />
-        </View>
-        <View style={styles.BestListDivider}>
-          <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 12,color: colors.Keppel}}>مشهاده همه</Text>
-          <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 16,color: colors.OxfordBlue}}>برترین ها</Text>
-        </View>
-        <View>
-          <BestList />
-        </View>
-        <View style={styles.BestListDivider}>
-          <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 12,color: colors.Keppel}}>مشهاده همه</Text>
-          <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 16,color: colors.OxfordBlue}}>برترین ها</Text>
-        </View>
-        <View>
-          <BestList />
-        </View>
-      </ScrollView>
+
+      <View style={{flex:1}}>
+        <TopBar />
+        <ScrollView style={[styles.container]}>
+          <View style={styles.AssetSection}>
+            <AssetSection />
+          </View>
+          <View style={styles.SelectionSection}>
+            <SelectionSection />
+          </View>
+          <View style={styles.BestListDivider}>
+            <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 12,color: colors.Keppel}}>مشهاده همه</Text>
+            <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 16,color: colors.OxfordBlue}}>برترین ها</Text>
+          </View>
+          <View>
+            <BestList />
+          </View>
+          <View style={styles.BestListDivider}>
+            <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 12,color: colors.Keppel}}>مشهاده همه</Text>
+            <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 16,color: colors.OxfordBlue}}>برترین ها</Text>
+          </View>
+          <View>
+            <BestList />
+          </View>
+        </ScrollView>
+      </View>
     )
   }
 }
@@ -44,7 +57,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // paddingTop:30,
-    marginTop:30,
+    // marginTop:30,
     // backgroundColor:'black'
   },
   lightContainer: {

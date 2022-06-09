@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { StyleSheet, SafeAreaView, useColorScheme } from 'react-native';
+import { StyleSheet, SafeAreaView, useColorScheme,View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Provider } from 'react-redux';
 import { store } from './redux/store'
@@ -11,14 +11,17 @@ import * as SplashScreen from 'expo-splash-screen'
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import Ionicons from '@expo/vector-icons/Ionicons'
 import { colors } from './misc/colors';
+// import TopBar from './components/TopBar/TopBar';
 import Home from './components/Home/Home'
-import List from './components/List/List'
+import Leaderboard from './components/Leaderboard/Leaderboard'
 import { switchTheme } from './redux/themSlice';
 
 
 const Tab = createBottomTabNavigator();
 
 export default function App () {
+console.log(StatusBar.currentHeight);
+
   return (
     <Provider store={store}>
       <Main />
@@ -26,7 +29,27 @@ export default function App () {
   )
 }
 
+export function Navigator() {
+
+  return (
+    <NavigationContainer >
+    <Tab.Navigator initialRouteName="Home" screenOptions={{tabBarShowLabel: false,tabBarActiveBackgroundColor:'gainsboro',tabBarInactiveBackgroundColor:'white',tabBarActiveTintColor:colors.OxfordBlue,tabBarInactiveTintColor:colors.CadetGrey, headerShown: false }}>
+      <Tab.Screen name="Leaderboard" component={Leaderboard} options={{  tabBarIcon: ({focused,color,size}) => (
+          <FontAwesome5 name="chart-bar" color={color} size={16} />
+          )}} />
+      <Tab.Screen name="Home" component={Home} options={{ tabBarIcon: ({focused,color,size}) => (
+          <Ionicons name="md-home" color={color} size={16} />
+      ),headerShown: false}} />
+    </Tab.Navigator>
+  </NavigationContainer>
+  )
+
+}
+
+
+
 export function Main() {
+
   // initialize action dispatcher
   const dispatch = useDispatch();
 
@@ -40,13 +63,11 @@ export function Main() {
     
   
 
-  // var themeContainerStyle =
-  // colorScheme === 'light' ? styles.lightContainer : styles.darkContainer;
-
   const [appIsReady, setAppIsReady] = useState(false);
   useEffect(() => {
     async function prepare() {
       try {
+       
         // Keep the splash screen visible while we fetch resources
         await SplashScreen.preventAutoHideAsync();
         // Pre-load fonts, make any API calls you need to do here
@@ -70,6 +91,7 @@ export function Main() {
 
   const onLayoutRootView = useCallback(async () => {
     if (appIsReady) {
+    
       // This tells the splash screen to hide immediately! If we call this after
       // `setAppIsReady`, then we may see a blank screen while the app is
       // loading its initial state and rendering its first pixels. So instead,
@@ -84,20 +106,14 @@ export function Main() {
   }
 
   return (
-    
-      <SafeAreaView style={[styles.container]} onLayout={onLayoutRootView} >
-          <StatusBar style="auto" />
-          <NavigationContainer>
-            <Tab.Navigator initialRouteName="Home" screenOptions={{tabBarShowLabel: false,tabBarActiveBackgroundColor:'gainsboro',tabBarInactiveBackgroundColor:'white',tabBarActiveTintColor:colors.OxfordBlue,tabBarInactiveTintColor:colors.CadetGrey, headerShown: false }}>
-              <Tab.Screen name="List" component={List} options={{  tabBarIcon: ({focused,color,size}) => (
-                  <FontAwesome5 name="chart-bar" color={color} size={16} />
-                  )}} />
-              <Tab.Screen name="Home" component={Home} options={{ tabBarIcon: ({focused,color,size}) => (
-                  <Ionicons name="md-home" color={color} size={16} />
-              )}} />
-            </Tab.Navigator>
-          </NavigationContainer>
+ 
+    <View style={{height:'100%'}}>
+          <StatusBar style="light" translucent={false}/>
+      <SafeAreaView style={[styles.container]} onLayout={onLayoutRootView}>
+
+          <Navigator />
       </SafeAreaView>
+        </View>
     
   );
 }
@@ -105,7 +121,7 @@ export function Main() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop:StatusBar.currentHeight
+    // marginTop:StatusBar.currentHeight
     // alignItems: 'center',
     // justifyContent: 'center',
   },
