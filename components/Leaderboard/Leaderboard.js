@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import {View, StyleSheet} from 'react-native'
+import {View, StyleSheet,FlatList} from 'react-native'
 import Divider from './components/Divider'
 // import ListComponent from './components/listView/ListComponent'
 import ListViewComponent from './components/listView/ListViewComponent'
+import Item from './components/listView/Item'
 import axios from 'axios'
 export class Leaderboard extends Component {
 
@@ -31,7 +32,15 @@ export class Leaderboard extends Component {
       <View style={styles.container}>
         <Divider />
         <ListViewComponent />
-        
+        <View style={styles.listView}>
+          <FlatList
+            data = {this.state.commodityData}
+            renderItem={({item}) => {
+              return <Item name={item.item} change={item.return} />
+            }}
+          ></FlatList>
+        </View>
+        {/* <Item /> */}
       </View>
     )
   }
@@ -44,6 +53,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     // justifyContent: 'center',
   },
+  listView: {
+    flex:1,
+    width:"100%"
+  }
 
 })
 export default Leaderboard

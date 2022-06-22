@@ -20,7 +20,8 @@ const Divider = () => {
 const styles = StyleSheet.create({
   
   container:{
-    flex:1,
+    // height: '100%',
+    // flex:1,
     // backgroundColor:'gainsboro',
     flexDirection:'row',
     justifyContent: 'space-between',
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
   AssetView:{
     flexWrap:'wrap',
     justifyContent:'center',
-    height:'100%',
+    // height:'100%',
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop:2,
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     flexWrap:'wrap',
     justifyContent:'center',
-    height:'100%',
+    // height:'100%',
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop:2,
