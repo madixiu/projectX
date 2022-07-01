@@ -1,6 +1,6 @@
-import { View,Image, Text,StyleSheet,Dimensions } from 'react-native'
+import { View,Image, Text,StyleSheet,Dimensions,TouchableOpacity } from 'react-native'
 import React from 'react'
-import BuySellButton from './BuySellButton'
+// import BuySellButton from './BuySellButton'
 import AssetBalance from './AssetBalance'
 
 // const height = PixelRatio.getPixelSizeForLayoutSize(30)
@@ -8,12 +8,14 @@ const logoSize = Math.round(Dimensions.get('screen').height * 0.06)
 export default function TopBar() {
   return (
     <View style={styles.container}>
-      <View style={styles.ViewLogo}>
-        <Image source={require('../../assets/WhaleLogo.png')} 
+      <TouchableOpacity style={styles.ViewLogo}>
+        {/* <Image source={require('../../assets/WhaleLogo.png')} 
+          style={styles.logo}
+        /> */}
+           <Image source={require('../../assets/profile_logo.png')} 
           style={styles.logo}
         />
-
-      </View>
+      </TouchableOpacity>
    
       {/* <Text>{height}</Text> */}
       <View style={styles.AssetBalanceView}>
@@ -23,7 +25,7 @@ export default function TopBar() {
       </View>
       <View style={styles.BuySellButtonView}>
 
-        <BuySellButton />
+        {/* <BuySellButton /> */}
       </View>
     </View>
   )
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     // justifyContent:'space-between',
     width: '100%',
-    height:'8%',
+    height:'9%',
     // height:64,
 
     elevation: 10

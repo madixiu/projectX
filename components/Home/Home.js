@@ -1,36 +1,43 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet,ScrollView } from 'react-native'
+import SearchSection from './components/SearchSection'
 import AssetSection from './components/AssetSection'
 import SelectionSection from './components/SelectionSection'
+import SelectionSection2 from './components/SelectionSection2'
+import SelectionSection3 from './components/SelectionSection3'
 import BestList from './components/BestList/BestList'
 import { colors } from '../../misc/colors'
 import TopBar from '../TopBar/TopBar'
 
 
 
-
-// const dispatch = useDispatch();
 export class Home extends Component {
   
   constructor(){
     super();
   }
-  componentDidMount(){
-    console.log("home monted");
-    console.log(this.props.route);
-
-  }
+  // componentDidMount(){
+  // }
   render() {
     return (
 
       <View style={{flex:1}}>
         <TopBar />
         <ScrollView style={[styles.container]}>
-          <View style={styles.AssetSection}>
+          <View>
+            <SearchSection />
+          </View>
+          {/* <View style={styles.AssetSection}>
             <AssetSection />
-          </View>
-          <View style={styles.SelectionSection}>
+          </View> */}
+          {/* <View style={styles.SelectionSection}>
             <SelectionSection />
+          </View> */}
+          {/* <View style={styles.SelectionSection}>
+            <SelectionSection2 />
+          </View> */}
+          <View style={styles.SelectionSection}>
+            <SelectionSection3 />
           </View>
           <View style={styles.BestListDivider}>
             <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 12,color: colors.Keppel}}>مشهاده همه</Text>
@@ -39,13 +46,13 @@ export class Home extends Component {
           <View>
             <BestList />
           </View>
-          <View style={styles.BestListDivider}>
+          {/* <View style={styles.BestListDivider}>
             <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 12,color: colors.Keppel}}>مشهاده همه</Text>
             <Text style={{fontFamily:'Vazirmatn-Regular',fontSize: 16,color: colors.OxfordBlue}}>برترین ها</Text>
           </View>
           <View>
             <BestList />
-          </View>
+          </View> */}
         </ScrollView>
       </View>
     )

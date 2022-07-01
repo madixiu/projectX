@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import {View, StyleSheet,FlatList} from 'react-native'
-import Divider from './components/Divider'
+import TopBar from '../TopBar/TopBar'
+import FiltersView from './components/listView/FiltersView'
+// import Divider from './components/Divider'
 // import ListComponent from './components/listView/ListComponent'
-import ListViewComponent from './components/listView/ListViewComponent'
 import Item from './components/listView/Item'
 import axios from 'axios'
 export class Leaderboard extends Component {
@@ -12,8 +13,6 @@ export class Leaderboard extends Component {
     this.state = { commodityData:[]}
   }
   componentDidMount(){
-    console.log("list monted");
-
     this.getCommodityData()
   }
   getCommodityData(){
@@ -30,8 +29,9 @@ export class Leaderboard extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Divider />
-        <ListViewComponent />
+        <TopBar />
+        <FiltersView />
+        {/* <Divider /> */}
         <View style={styles.listView}>
           <FlatList
             data = {this.state.commodityData}

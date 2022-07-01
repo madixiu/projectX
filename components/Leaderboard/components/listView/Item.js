@@ -7,13 +7,11 @@ import { LineChart } from 'react-native-chart-kit';
 const Item = (props) => {
 
   const [chartParentWidth, setChartParentWidth] = useState(0);
-  const [chartParentHeight, setChartParentHeight] = useState(0);
+  // const [chartParentHeight, setChartParentHeight] = useState(0);
   const onLayout=(event)=> {
-    const {height, width} = event.nativeEvent.layout;
+     let width = event.nativeEvent.layout.width;
     setChartParentWidth(width);
-    setChartParentHeight(height);
-    console.log(height);
-    console.log(width);
+    // setChartParentHeight(height);
   }
   const maxWidth = Dimensions.get("window").width/4
   const chartConfig = {
@@ -21,14 +19,6 @@ const Item = (props) => {
     backgroundGradientFromOpacity: 0,
     backgroundGradientTo: "#000",
     backgroundGradientToOpacity: 0,
-    // backgroundColor: "#f2f2f2",
-    // backgroundGradientOpacity: 0,
-    // backgroundGradientFrom: "#f2f2f2",
-    // backgroundGradientTo: "#f2f2f2",
-    // fillShadowGradient:"#402cd3",
-    // fillShadowGradientFrom:"#fff",
-    // fillShadowGradientTo:"#fff",
-    // fillShadowGradientOpacity:0,
     decimalPlaces: 2, // optional, defaults to 2dp
     color: () => `rgb(30,204,151)`, // optional
   }
@@ -55,10 +45,8 @@ const Item = (props) => {
             withHorizontalLines={false}
             withVerticalLabels={false}
             withHorizontalLabels={false}
-        
-            // flatColor={true}
             data={{
-              // labels: ["January", "February", "March", "April", "May", "June"],
+
               datasets: [{
                     data: [ 100,200,150,400,300, 450, 380, 500, 650, 430,700 ],
                     
