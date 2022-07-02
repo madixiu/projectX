@@ -48,7 +48,7 @@ export default class ListDetail extends Component {
           <View>
             <View style={{flexDirection:'row',alignItems:'center'}}>
               <View style={{paddingRight:5}}>
-                <Text style={{fontFamily:'Vazirmatn-Regular',color: colors.OxfordBlue}}>رمز ارز</Text>
+                <Text style={{fontFamily:'Vazirmatn-SemiBold',color: colors.OxfordBlue}}>رمز ارز</Text>
                 <Text style={{fontFamily:'Vazir-Medium-FD',color: colors.Keppel}}>+9.3%</Text>
               </View>
               <MaterialCommunityIcons name="bitcoin" size={24} color="black" />

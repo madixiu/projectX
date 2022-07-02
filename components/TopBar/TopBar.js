@@ -1,9 +1,11 @@
 import { View,Image, Text,StyleSheet,Dimensions,TouchableOpacity } from 'react-native'
 import React from 'react'
+// import Constants from 'expo-constants';
 // import BuySellButton from './BuySellButton'
 import AssetBalance from './AssetBalance'
 
 // const height = PixelRatio.getPixelSizeForLayoutSize(30)
+const TopBarHeight = (Dimensions.get('screen').height)*0.07
 const logoSize = Math.round(Dimensions.get('screen').height * 0.06)
 export default function TopBar() {
   return (
@@ -39,7 +41,8 @@ const styles = StyleSheet.create({
     alignItems:'center',
     // justifyContent:'space-between',
     width: '100%',
-    height:'9%',
+    height:TopBarHeight,
+    // marginTop: Constants.statusBarHeight,
     // height:64,
 
     elevation: 10

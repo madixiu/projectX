@@ -118,12 +118,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'gainsboro',
     marginHorizontal:15,
     borderRadius:5,
-    paddingVertical:3,
+    paddingVertical:5,
     alignItems:'center'
   },
   filterText: {
     fontSize:10,
-    fontFamily:'Vazirmatn-Regular'
+    fontFamily:'Vazirmatn-SemiBold',
+    // fontWeight:'bold',
   },
 
   //? Modal Section ********
@@ -143,11 +144,9 @@ const styles = StyleSheet.create({
    
   },
   modalHeader: {
-    flex:1,
     paddingVertical:20,
     paddingHorizontal:20,
     justifyContent:'center',
-    // flexDirection:'row',
     width:'100%',
     backgroundColor:'gainsboro'
   },
