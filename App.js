@@ -14,6 +14,7 @@ import { colors } from './misc/colors';
 // import TopBar from './components/TopBar/TopBar';
 import Home from './components/Home/Home'
 import Leaderboard from './components/Leaderboard/Leaderboard'
+import Portfolio from './components/Portfolio/Portfolio';
 import { switchTheme } from './redux/themSlice';
 
 
@@ -33,13 +34,16 @@ export function Navigator() {
 
   return (
     <NavigationContainer >
-    <Tab.Navigator initialRouteName="Leaderboard" screenOptions={{tabBarShowLabel: false,tabBarActiveBackgroundColor:'gainsboro',tabBarInactiveBackgroundColor:'white',tabBarActiveTintColor:colors.OxfordBlue,tabBarInactiveTintColor:colors.CadetGrey, headerShown: false }}>
+    <Tab.Navigator initialRouteName="Leaderboard" screenOptions={{tabBarShowLabel: true,tabBarActiveBackgroundColor:'gainsboro',tabBarInactiveBackgroundColor:'white',tabBarActiveTintColor:colors.OxfordBlue,tabBarInactiveTintColor:colors.CadetGrey, headerShown: false,tabBarLabelPosition: 'below-icon' }}>
+      <Tab.Screen name="Portfolio"  component={Portfolio} options={{ tabBarIcon: ({focused,color,size}) => (
+          <FontAwesome5 name="chart-pie" color={color} size={16} />
+      ),tabBarLabel: 'پورتفو' }} />
       <Tab.Screen name="Leaderboard" component={Leaderboard} options={{  tabBarIcon: ({focused,color,size}) => (
           <FontAwesome5 name="chart-bar" color={color} size={16} />
-          )}} />
+          ),tabBarLabel: 'لیدربورد'}} />
       <Tab.Screen name="Home" component={Home} options={{ tabBarIcon: ({focused,color,size}) => (
           <Ionicons name="md-home" color={color} size={16} />
-      ),headerShown: false}} />
+      ),tabBarLabel: 'خانه'}} />
     </Tab.Navigator>
   </NavigationContainer>
   )

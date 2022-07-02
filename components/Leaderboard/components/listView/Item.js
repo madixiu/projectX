@@ -30,9 +30,8 @@ const Item = (props) => {
 
     <View style={styles.container}>
       <View style={styles.changeView}>
-
-        <Text style={[styles.changeText,{color: props.change<0 ? 'red' : 'green'}]}>%{props.change}</Text>
         <Entypo name={props.change<0 ? "triangle-down" : "triangle-up"} size={16} color={props.change<0 ? 'red' : 'green'} />
+        <Text style={[styles.changeText,{color: props.change<0 ? 'red' : 'green'}]}>{props.change}%</Text>
       </View>
       {/* //? chartView */}
       <View style={styles.chartView} onLayout={onLayout}>
