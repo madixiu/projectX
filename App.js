@@ -35,13 +35,13 @@ export function Navigator() {
 
   return (
     <NavigationContainer >
-    <Tab.Navigator initialRouteName="Leaderboard" screenOptions={{tabBarShowLabel: true,tabBarActiveBackgroundColor:'gainsboro',tabBarInactiveBackgroundColor:'white',tabBarActiveTintColor:colors.OxfordBlue,tabBarInactiveTintColor:colors.CadetGrey, headerShown: false,tabBarLabelPosition: 'below-icon' }}>
+    <Tab.Navigator initialRouteName="Home" screenOptions={{tabBarShowLabel: true,tabBarActiveBackgroundColor:'gainsboro',tabBarInactiveBackgroundColor:'white',tabBarActiveTintColor:colors.OxfordBlue,tabBarInactiveTintColor:colors.CadetGrey, headerShown: false,tabBarLabelPosition: 'below-icon',tabBarLabelStyle:styles.tabBarLabelStyle }}>
       <Tab.Screen name="Portfolio"  component={Portfolio} options={{ tabBarIcon: ({focused,color,size}) => (
           <FontAwesome5 name="chart-pie" color={color} size={16} />
-      ),tabBarLabel: 'پورتفو' }} />
+      ),tabBarLabel: 'سبد دارایی' }} />
       <Tab.Screen name="Leaderboard" component={Leaderboard} options={{  tabBarIcon: ({focused,color,size}) => (
           <FontAwesome5 name="chart-bar" color={color} size={16} />
-          ),tabBarLabel: 'لیدربورد'}} />
+          ),tabBarLabel: 'بازار'}} />
       <Tab.Screen name="Home" component={Home} options={{ tabBarIcon: ({focused,color,size}) => (
           <Ionicons name="md-home" color={color} size={16} />
       ),tabBarLabel: 'خانه'}} />
@@ -130,10 +130,9 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // justifyContent: 'center',
   },
-  lightContainer: {
-    backgroundColor: '#fff',
-  },
-  darkContainer: {
-    backgroundColor: '#242c40',
-  },
+  tabBarLabelStyle: {
+    fontFamily:'Vazirmatn-SemiBold',
+    fontSize:12,
+    // marginTop:0
+  }
 });

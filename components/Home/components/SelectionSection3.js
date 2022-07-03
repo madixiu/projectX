@@ -1,6 +1,7 @@
 import { Text, View,StyleSheet,TouchableOpacity } from 'react-native'
 import React from 'react'
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import  MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { colors } from '../../../misc/colors';
 
@@ -13,14 +14,14 @@ const SelectionSection3 =() => {
         <TouchableOpacity style={styles.SelectionView}>
           <View style={styles.SelectionViewIcon}>
             <Text style={styles.SelectionViewText}>ارز</Text>
-            <MaterialCommunityIcons name="bitcoin" color={colors.OxfordBlue} size={24} />
+            <MaterialIcons name="attach-money" size={24} color={colors.OxfordBlue} />
           </View>
 
         </TouchableOpacity>
         <TouchableOpacity style={styles.SelectionView}>
           <View style={styles.SelectionViewIcon}>
             <Text style={styles.SelectionViewText}>املاک</Text>
-            <MaterialCommunityIcons name="bitcoin" color={colors.OxfordBlue} size={24} />
+            <MaterialCommunityIcons name="office-building" color={colors.OxfordBlue} size={24} />
           </View>
 
         </TouchableOpacity>
@@ -40,7 +41,7 @@ const SelectionSection3 =() => {
         <TouchableOpacity style={styles.SelectionView}>
           <View style={styles.SelectionViewIcon}>
             <Text style={styles.SelectionViewText}>صندوق</Text>
-            <MaterialCommunityIcons name="bitcoin" color={colors.OxfordBlue} size={24} />
+            <MaterialCommunityIcons name="inbox-multiple" color={colors.OxfordBlue} size={24} />
           </View>
 
         </TouchableOpacity>
@@ -48,7 +49,7 @@ const SelectionSection3 =() => {
         <TouchableOpacity style={styles.SelectionView}>
           <View style={styles.SelectionViewIcon}>
             <Text style={styles.SelectionViewText}>صندوق</Text>
-            <MaterialCommunityIcons name="bitcoin" color={colors.OxfordBlue} size={24} />
+            <FontAwesome5 name="inbox" color={colors.OxfordBlue} size={24} />
           </View>
 
         </TouchableOpacity>
@@ -56,7 +57,7 @@ const SelectionSection3 =() => {
         <TouchableOpacity style={styles.SelectionView}>
           <View style={styles.SelectionViewIcon}>
             <Text style={styles.SelectionViewText}>طلا</Text>
-            <MaterialCommunityIcons name="bitcoin" color={colors.OxfordBlue} size={24} />
+            <MaterialCommunityIcons name="gold" color={colors.OxfordBlue} size={24} />
           </View>
 
         </TouchableOpacity>

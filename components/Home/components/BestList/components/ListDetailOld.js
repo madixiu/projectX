@@ -38,9 +38,11 @@ export default class ListDetail extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.ItemTopSection}>
-          <View style={{justifyContent:'center'}}>
-            <View style={styles.rankView}>
-              <Text style={{fontFamily:'Vazir-Medium-FD',color: colors.OxfordBlue}}>۱</Text>
+          <View>
+            <Text style={{fontFamily:'Vazir-Medium-FD',color: colors.OxfordBlue}}>رتبه ۱</Text>
+            <View style={{flexDirection:'row',alignItems:'center'}}>
+              <MaterialCommunityIcons name="chevron-double-up" size={16} color={colors.Keppel} />
+              <Text style={{fontFamily:'Vazir-Medium-FD',color: colors.Keppel}}>12</Text>
             </View>
           </View>
           <View>
@@ -109,10 +111,5 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 10,
     
-  },
-  rankView: {
-    backgroundColor:'gainsboro',
-    paddingHorizontal:10,
-    borderRadius:10
   }
 });
