@@ -48,11 +48,7 @@ function ModalView({modal,setVisibleModal}) {
       <TouchableOpacity style={styles.modalContent}>
         <Text style={styles.modalText}>سالانه</Text>
       </TouchableOpacity>
-      {/* <TouchableOpacity onPress={() => setVisibleModal(false)}>
-        <View style={styles.closeButton}>
-          <Text>Close</Text>
-        </View>
-      </TouchableOpacity> */}
+
     </View>
   )
   if(modal == 1)
@@ -128,13 +124,6 @@ const styles = StyleSheet.create({
   },
 
   //? Modal Section ********
-  closeButton: {
-    // borderWidth:1,
-    backgroundColor: 'gainsboro',
-    borderRadius:15,
-    padding:5,
-
-  },
   modalContainer: {
     width:'100%',
     // height:100,

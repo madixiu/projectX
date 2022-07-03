@@ -39,9 +39,6 @@ const styles = StyleSheet.create({
     paddingHorizontal:4,
    
   },
-  topView: {
-
-  },
   bottomView: {
     flex:1,
     // width:'100%',
