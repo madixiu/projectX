@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { View, StyleSheet} from 'react-native';
-import { ScrollView } from 'react-native-virtualized-view';
 // import Constants from 'expo-constants';
 import TabViewExample from './components/TabView'
 // You can import from local files
