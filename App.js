@@ -16,6 +16,7 @@ import { colors } from './misc/colors';
 import Home from './components/Home/Home'
 import Leaderboard from './components/Leaderboard/Leaderboard'
 import Portfolio from './components/Portfolio/Portfolio';
+import Portfolio2 from './components/Portfolio2/Portfolio2';
 import { switchTheme } from './redux/themSlice';
 
 
@@ -35,7 +36,10 @@ export function Navigator() {
 
   return (
     <NavigationContainer >
-    <Tab.Navigator initialRouteName="Home" screenOptions={{tabBarShowLabel: true,tabBarActiveBackgroundColor:'gainsboro',tabBarInactiveBackgroundColor:'white',tabBarActiveTintColor:colors.OxfordBlue,tabBarInactiveTintColor:colors.CadetGrey, headerShown: false,tabBarLabelPosition: 'below-icon',tabBarLabelStyle:styles.tabBarLabelStyle }}>
+    <Tab.Navigator initialRouteName="Portfolio2" screenOptions={{tabBarShowLabel: true,tabBarActiveBackgroundColor:'gainsboro',tabBarInactiveBackgroundColor:'white',tabBarActiveTintColor:colors.OxfordBlue,tabBarInactiveTintColor:colors.CadetGrey, headerShown: false,tabBarLabelPosition: 'below-icon',tabBarLabelStyle:styles.tabBarLabelStyle }}>
+    <Tab.Screen name="Portfolio2"  component={Portfolio2} options={{ tabBarIcon: ({focused,color,size}) => (
+          <FontAwesome5 name="chart-pie" color={color} size={16} />
+      ),tabBarLabel: 'سبد دارایی' }} />
       <Tab.Screen name="Portfolio"  component={Portfolio} options={{ tabBarIcon: ({focused,color,size}) => (
           <FontAwesome5 name="chart-pie" color={color} size={16} />
       ),tabBarLabel: 'سبد دارایی' }} />
@@ -80,7 +84,7 @@ export function Main() {
           'Vazir-Medium-FD': require('./assets/fonts/Vazir-Medium-FD.ttf'),
           'Vazirmatn-Medium': require('./assets/fonts/Vazirmatn-Medium.ttf'),
           'Vazirmatn-Regular': require('./assets/fonts/Vazirmatn-Regular.ttf'),
-          'Vazirmatn-SemiBold': require('./assets/fonts/Vazir-Medium-FD.ttf')});
+          'Vazirmatn-SemiBold': require('./assets/fonts/Vazirmatn-SemiBold.ttf')});
         // Artificially delay for two seconds to simulate a slow loading
         // experience. Please remove this if you copy and paste the code!
         await new Promise(resolve => setTimeout(resolve, 1000));

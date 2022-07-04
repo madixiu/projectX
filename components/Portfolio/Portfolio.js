@@ -1,11 +1,19 @@
-import { Text, View, StyleSheet } from 'react-native'
-import React from 'react'
-
+import * as React from 'react';
+import { View, StyleSheet} from 'react-native';
+import { ScrollView } from 'react-native-virtualized-view';
+// import Constants from 'expo-constants';
+import TabViewExample from './components/TabView'
+// You can import from local files
+import AssetView from './components/AssetView.js/AssetView'
+import AssetList from './components/AssetList/AssetList'
+// or any pure javascript modules available in npm
  class Portfolio extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Portfolio</Text>
+        <AssetView />
+        <TabViewExample />
+        <AssetList />
       </View>
     )
   }
@@ -13,7 +21,8 @@ import React from 'react'
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent:'center'
+    flex: 1,
+
   }
 })
 export default Portfolio

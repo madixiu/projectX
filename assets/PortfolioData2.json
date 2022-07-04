@@ -1,0 +1,23 @@
+[
+  {
+    "id":1,
+    "asset":"نقد",
+    "balancePercent":30,
+    "weekReturn":null,
+    "assetReturn":null
+  },
+  {
+    "id":2,
+    "asset":"طلا",
+    "balancePercent":52,
+    "weekReturn":-2,
+    "assetReturn":11
+  },
+  {
+    "id":3,
+    "asset":"رمز ارز",
+    "balancePercent":18,
+    "weekReturn":3.5,
+    "assetReturn":-1
+  }
+]

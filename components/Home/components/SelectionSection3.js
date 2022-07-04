@@ -9,7 +9,7 @@ import { colors } from '../../../misc/colors';
 const SelectionSection3 =() => {
   return (
     <View style={styles.container}>
-      <View>
+      <View style={{flex:1,marginRight:10,marginLeft:30}}>
 
         <TouchableOpacity style={styles.SelectionView}>
           <View style={styles.SelectionViewIcon}>
@@ -37,7 +37,7 @@ const SelectionSection3 =() => {
       </View>
       
       {/*//? second Row */}
-      <View>
+      <View style={{flex:1,marginLeft:10,marginRight:30}}>
         <TouchableOpacity style={styles.SelectionView}>
           <View style={styles.SelectionViewIcon}>
             <Text style={styles.SelectionViewText}>صندوق</Text>
