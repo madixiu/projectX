@@ -46,7 +46,7 @@ export default function BuyandSellButton() {
           <View style={{paddingVertical:15}}>
           <Slider
               style={{width: SliderWidth, height: 40}}
-              value={sliderValue}
+              value={20}
               onValueChange={(val)=> setSliderValue(val.toFixed(2))}
               minimumValue={0}
               maximumValue={100}

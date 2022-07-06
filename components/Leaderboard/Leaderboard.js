@@ -23,7 +23,7 @@ export class Leaderboard extends Component {
     }).then (response => {
       let data = response.data
       this.setState({commodityData: data})
-      console.log(data);
+      // console.log(data);
     })
   }
   render() {

@@ -23,7 +23,7 @@ import { switchTheme } from './redux/themSlice';
 const Tab = createBottomTabNavigator();
 
 export default function App () {
-console.log(StatusBar.currentHeight);
+// console.log(StatusBar.currentHeight);
 
   return (
     <Provider store={store}>
