@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { StyleSheet, SafeAreaView, useColorScheme,View } from 'react-native';
+import { StyleSheet, SafeAreaView, useColorScheme } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import { Provider } from 'react-redux';
@@ -47,7 +47,7 @@ export function Navigator() {
           <FontAwesome5 name="chart-bar" color={color} size={16} />
           ),tabBarLabel: 'بازار'}} />
       <Tab.Screen name="Home" component={Home} options={{ tabBarIcon: ({focused,color,size}) => (
-          <Ionicons name="md-home" color={color} size={16} />
+          <Ionicons name="home" color={color} size={16} />
       ),tabBarLabel: 'خانه'}} />
     </Tab.Navigator>
   </NavigationContainer>
@@ -116,13 +116,11 @@ export function Main() {
 
   return (
  
-    <View style={{height:'100%'}}>
-          <StatusBar style="light" translucent={false}/>
       <SafeAreaView style={[styles.container]} onLayout={onLayoutRootView}>
+          <StatusBar style="light" translucent={false}/>
 
           <Navigator />
       </SafeAreaView>
-        </View>
     
   );
 }
