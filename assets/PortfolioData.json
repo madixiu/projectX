@@ -1,0 +1,29 @@
+[
+  { 
+    "id":1,
+    "name":"Dogecoin",
+    "symbol":"DOGE",
+    "price":0.07024,
+    "change":3.139,
+    "holding":64.00,
+    "logo":"https://s2.coinmarketcap.com/static/img/coins/32x32/74.png"
+  },
+  {
+    "id":2,
+    "name":"Polkadot",
+    "symbol":"DOT",
+    "price":8.173,
+    "change":-1.317,
+    "holding":0.39,
+    "logo":"https://s2.coinmarketcap.com/static/img/coins/32x32/6636.png"
+  },
+  {
+    "id":3,
+    "name":"Harmony",
+    "symbol":"ONE",
+    "price":0.0248,
+    "change":-2.289,
+    "holding":78.60,
+    "logo":"https://s2.coinmarketcap.com/static/img/coins/32x32/3945.png"
+  }
+]
